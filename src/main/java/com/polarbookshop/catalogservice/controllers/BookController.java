@@ -38,7 +38,7 @@ public class BookController {
     }
 
     @PutMapping("{isbn}")
-    public Book put(@PathVariable String isbn,@Valid  @RequestBody Book book) {
+    public Book put(@PathVariable String isbn, @Valid @RequestBody Book book) {
         return bookService.editBook(isbn, book);
     }
 }
