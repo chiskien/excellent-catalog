@@ -1,11 +1,11 @@
-# Polar Bookshop
+# Excellent Book Shop
 
 Polar BookShop is seperate from Excellent Reads
 
 > While excellent_read acts as a social media like facebook, meta. People can post their review about books and tracks down their progress.
 > 
 >
-> Polar Bookshop is online book store.
+> Excellent Book Shop is online book store.
 
 
 
@@ -15,7 +15,7 @@ Service-based Architecture
 
 ## Web and Interactions
 
-- RESTful web services using Spring MVC (blocking) 
+- RESTFul web services using Spring MVC (blocking) 
 - Spring WebFlux / Reacting Programming (non-blocking)
 - Event-Driven Programming
 - Spring Cloud stream
