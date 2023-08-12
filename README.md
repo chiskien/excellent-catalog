@@ -1,8 +1,8 @@
 # Excellent Book Shop
 
-Polar BookShop is seperate from Excellent Reads
+Excellent BookShop is separate from Excellent Reads
 
-> While excellent_read acts as a social media like facebook, meta. People can post their review about books and tracks down their progress.
+> Excellent Read acts as a social media like facebook, instagram, and people can post their review about books and tracks down their progress.
 > 
 >
 > Excellent Book Shop is online book store.
