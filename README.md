@@ -11,7 +11,8 @@ Excellent BookShop is separate from Excellent Reads
 
 # Patterns and Technologies
 
-Service-based Architecture
+- 12 Factors and Beyond Practices and Patterns
+- Service-based Architecture
 
 ## Web and Interactions
 
@@ -33,4 +34,9 @@ Service-based Architecture
 
 ## Configuration
 
+- Using External Configuration
+- Spring Cloud Config
+- ConfigMaps and Secrets in K8S
+
+## Routing
 
