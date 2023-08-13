@@ -7,7 +7,13 @@ Excellent BookShop is separate from Excellent Reads
 >
 > Excellent Book Shop is online book store.
 
+## Use cases: 
 
+- View the list of books in the catalog
+- Search books by their ISBN (International Standard Book Number)
+- Add a new book to the catalog
+- Edit information for an existing book
+- Remove a book from the catalog
 
 # Patterns and Technologies
 
@@ -37,6 +43,4 @@ Excellent BookShop is separate from Excellent Reads
 - Using External Configuration
 - Spring Cloud Config
 - ConfigMaps and Secrets in K8S
-
-## Routing
 
