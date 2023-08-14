@@ -2,12 +2,13 @@
 
 Excellent BookShop is separate from Excellent Reads
 
-> Excellent Read acts as a social media like facebook, instagram, and people can post their review about books and tracks down their progress.
-> 
+> Excellent Read acts as a social media like facebook, instagram, and people can post their review about books and
+> tracks down their progress.
+>
 >
 > Excellent Book Shop is online book store.
 
-## Use cases: 
+## Use cases:
 
 - View the list of books in the catalog
 - Search books by their ISBN (International Standard Book Number)
@@ -17,12 +18,12 @@ Excellent BookShop is separate from Excellent Reads
 
 # Patterns and Technologies
 
-- 12 Factors and Beyond Practices and Patterns
+- [12 Factors and Beyond Practices and Patterns](https://architecturenotes.co/12-factor-app-revisited/)
 - Service-based Architecture
 
 ## Web and Interactions
 
-- RESTFul web services using Spring MVC (blocking) 
+- RESTFul web services using Spring MVC (blocking)
 - Spring WebFlux / Reacting Programming (non-blocking)
 - Event-Driven Programming
 - Spring Cloud stream
