@@ -1,4 +1,7 @@
+#name of the workflow
 name: Commit Stage
+
+# the workflow is triggered when new code is published to the repository
 on: push
 
 jobs:
