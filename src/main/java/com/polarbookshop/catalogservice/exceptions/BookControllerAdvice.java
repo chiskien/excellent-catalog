@@ -14,7 +14,6 @@ import java.util.Map;
 @RestControllerAdvice
 public class BookControllerAdvice {
 
-
     @ExceptionHandler(BookNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     String bookNotFoundHandler(BookNotFoundException ex) {
