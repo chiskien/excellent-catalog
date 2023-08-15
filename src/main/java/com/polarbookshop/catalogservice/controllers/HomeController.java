@@ -14,7 +14,7 @@ public class HomeController {
         this.excellentProperties = excellentProperties;
     }
 
-    @GetMapping("/greet")
+    @GetMapping("/")
     public String getGreet() {
         return excellentProperties.getGreeting();
     }

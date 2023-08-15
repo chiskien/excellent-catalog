@@ -9,9 +9,9 @@ import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 @Component
-@Profile("testdata")
 //this class is instructed only if Profile testdata is active
-
+@ConditionalOnProperty(name = "polar.test-data.enabled", havingValue = "true")
+@Profile("test-data")
 public class BookDataLoader {
     private final BookRepository bookRepository;
 

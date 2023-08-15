@@ -7,7 +7,12 @@ server:
       max: 50
       min-spare: 5
 polar:
-  greeting: "Fuck the police"
+  greeting: "Welcome to Catalog Service"
+  test-data:
+    enabled: true
 
+#spring:
+#  profiles:
+#    active: test-data
 
 

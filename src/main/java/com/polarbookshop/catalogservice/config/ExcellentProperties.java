@@ -3,16 +3,14 @@ package com.polarbookshop.catalogservice.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.NestedConfigurationProperty;
 import org.springframework.core.env.Environment;
-import org.springframework.core.env.Profiles;
 
 //mark the class as a source for config properties starting with prefix = "polar"
 //define custom properties
 @ConfigurationProperties(prefix = "polar")
 public class ExcellentProperties {
     private String greeting;
-    private final TestData profileTestData;
+    private final TestData testData;
 
     @Autowired
     public Environment environment;
@@ -21,11 +19,11 @@ public class ExcellentProperties {
     private String serverPort;
 
     public ExcellentProperties() {
-        this.profileTestData = new TestData();
+        this.testData = new TestData();
     }
 
-    public TestData getProfileTestData() {
-        return this.profileTestData;
+    public TestData getTestData() {
+        return this.testData;
     }
 
     public String getServerPortByEnvironment() {
