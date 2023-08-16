@@ -6,8 +6,8 @@ server:
     threads:
       max: 50
       min-spare: 5
-polar:
-  greeting: "Welcome to Catalog Service"
+#polar:
+#  greeting: "Welcome to Catalog Service"
 spring:
   application:
     name: catalog-service

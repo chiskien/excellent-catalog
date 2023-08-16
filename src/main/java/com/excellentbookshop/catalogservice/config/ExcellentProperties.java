@@ -1,4 +1,4 @@
-package com.polarbookshop.catalogservice.config;
+package com.excellentbookshop.catalogservice.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

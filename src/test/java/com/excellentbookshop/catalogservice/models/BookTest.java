@@ -1,4 +1,4 @@
-package com.polarbookshop.catalogservice.models;
+package com.excellentbookshop.catalogservice.models;
 
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
 import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class BookTest {
     private static Validator validator;

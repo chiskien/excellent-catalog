@@ -1,4 +1,4 @@
-package com.polarbookshop.catalogservice.exceptions;
+package com.excellentbookshop.catalogservice.exceptions;
 
 
 import org.springframework.http.HttpStatus;

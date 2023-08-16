@@ -1,7 +1,7 @@
-package com.polarbookshop.catalogservice.controllers;
+package com.excellentbookshop.catalogservice.controllers;
 
-import com.polarbookshop.catalogservice.models.Book;
-import com.polarbookshop.catalogservice.services.BookService;
+import com.excellentbookshop.catalogservice.models.Book;
+import com.excellentbookshop.catalogservice.services.BookService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

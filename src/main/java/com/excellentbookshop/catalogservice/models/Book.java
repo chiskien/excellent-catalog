@@ -1,4 +1,4 @@
-package com.polarbookshop.catalogservice.models;
+package com.excellentbookshop.catalogservice.models;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

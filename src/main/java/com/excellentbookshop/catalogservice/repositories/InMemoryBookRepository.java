@@ -1,6 +1,6 @@
-package com.polarbookshop.catalogservice.repositories;
+package com.excellentbookshop.catalogservice.repositories;
 
-import com.polarbookshop.catalogservice.models.Book;
+import com.excellentbookshop.catalogservice.models.Book;
 import org.springframework.stereotype.Repository;
 
 import java.util.Map;

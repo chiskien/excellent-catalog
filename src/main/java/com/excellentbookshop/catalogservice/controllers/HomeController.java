@@ -1,7 +1,7 @@
-package com.polarbookshop.catalogservice.controllers;
+package com.excellentbookshop.catalogservice.controllers;
 
 
-import com.polarbookshop.catalogservice.config.ExcellentProperties;
+import com.excellentbookshop.catalogservice.config.ExcellentProperties;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
