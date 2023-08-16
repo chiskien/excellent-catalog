@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 //this class is instructed only if Profile testdata is active
-@ConditionalOnProperty(name = "polar.test-data.enabled", havingValue = "true")
-@Profile("test-data")
+//@ConditionalOnProperty(name = "polar.test-data.enabled", havingValue = "true")
+@Profile("demo")
 public class BookDataLoader {
     private final BookRepository bookRepository;
 
