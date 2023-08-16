@@ -8,8 +8,14 @@ server:
       min-spare: 5
 polar:
   greeting: "Welcome to Catalog Service"
-
-
+spring:
+  application:
+    name: catalog-service
+  config:
+    import: "optional:configserver:"
+  cloud:
+    config:
+      uri: http://localhost:8888
 #spring:
 #  profiles:
 #    active: test-data
