@@ -19,13 +19,13 @@ public class HomeController {
         return excellentProperties.getGreeting();
     }
 
-    @GetMapping("/server")
-    public String getPort1() {
-        return excellentProperties.getServerPort();
-    }
-
-    @GetMapping("/port")
-    public String getPort2() {
-        return excellentProperties.getServerPortByEnvironment();
-    }
+//    @GetMapping("/server")
+//    public String getPort1() {
+//        return excellentProperties.getServerPort();
+//    }
+//
+//    @GetMapping("/port")
+//    public String getPort2() {
+//        return excellentProperties.getServerPortByEnvironment();
+//    }
 }
