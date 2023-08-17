@@ -19,7 +19,8 @@ public record Book(
         @NotBlank(message = "The author must be defined")
         String author,
         @Positive(message = "The book price must be greater than zero")
-        Double price, @Version int version) {
+        Double price,
+        @Version int version) {
     public static Book of(String isbn, String title, String author, Double price) {
         return new Book(null, isbn, title, author, price, 0);
     }

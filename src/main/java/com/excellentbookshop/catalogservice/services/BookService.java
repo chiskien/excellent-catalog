@@ -37,7 +37,7 @@ public class BookService {
     public Book editBook(String isbn, Book book) {
         return bookRepository.findByIsbn(isbn)
                 .map(existingBook -> {
-                    Book bookToUpdate = new Book(
+                    Book bookToUpdate = Book.of(
                             existingBook.isbn(),
                             book.title(),
                             book.author(),

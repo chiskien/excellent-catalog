@@ -9,13 +9,6 @@ server:
 #polar:
 #  greeting: "Welcome to Catalog Service"
 spring:
-  datasource:
-    username: postgres
-    password: chiskien
-    url: jdbc:postgresql://localhost:5432/polardb_catalog
-    hikari:
-      connection-timeout: 2000
-      maximum-pool-size: 5
   application:
     name: catalog-service
   config:
@@ -30,6 +23,16 @@ spring:
         initial-interval: 1000
         max-interval: 2000
         multiplier: 1.1
+  datasource:
+    username: postgres
+    password: chiskien
+    url: jdbc:postgresql://localhost:5432/polardb_catalog
+    hikari:
+      connection-timeout: 2000
+      maximum-pool-size: 5
+  sql:
+    init:
+      mode: always
 
 management:
   endpoints:
