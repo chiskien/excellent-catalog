@@ -34,4 +34,4 @@ jobs:
         with:
           sarif_file: ${{ steps.scan.outputs.sarif }}
       - name: Build, unit tests, and integration tests
-        run: mvn install
+        run: mvn clean install
