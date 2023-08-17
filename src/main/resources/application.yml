@@ -9,6 +9,10 @@ server:
 #polar:
 #  greeting: "Welcome to Catalog Service"
 spring:
+  datasource:
+    username: postgres
+    password: chiskien
+    url: jdbc:postgresql://localhost:5432/polardb_catalog
   application:
     name: catalog-service
   config:
