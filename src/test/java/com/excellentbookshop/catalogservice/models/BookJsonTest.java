@@ -17,7 +17,7 @@ public class BookJsonTest {
 
     @Test
     void testSerialize() throws Exception {
-        Book book = new Book("1234567890", "Title", "Author", 9.0);
+        Book book = Book.of("1234567890", "Title", "Author", 9.0);
         JsonContent<Book> jsonContent = json.write(book);
         assertThat(jsonContent).extractingJsonPathStringValue("@.isbn")
                 .isEqualTo(book.isbn());
