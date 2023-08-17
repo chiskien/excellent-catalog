@@ -43,5 +43,7 @@ Excellent BookShop is separate from Excellent Reads
 
 - Using External Configuration
 - Spring Cloud Config
-- ConfigMaps and Secrets in K8S
+
+
+
 
