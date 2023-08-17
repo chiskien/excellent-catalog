@@ -22,8 +22,8 @@ public class BookDataLoader {
     // test data is generated when an ApplicationReadyEvent is triggered
     @EventListener(ApplicationReadyEvent.class)
     public void loadBooks() {
-        Book b1 = new Book("1234567891", "Atomic Habits", "James Clear", 23.0);
-        Book b2 = new Book("1234567899", "The Midnight Library", "Matt Haig", 200.0);
+        Book b1 = Book.of("1234567891", "Atomic Habits", "James Clear", 23.0);
+        Book b2 = Book.of("1234567899", "The Midnight Library", "Matt Haig", 200.0);
         bookRepository.save(b1);
         bookRepository.save(b2);
     }
