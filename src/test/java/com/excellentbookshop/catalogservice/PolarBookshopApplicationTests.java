@@ -1,22 +1,28 @@
 package com.excellentbookshop.catalogservice;
 
 import com.excellentbookshop.catalogservice.models.Book;
+import com.excellentbookshop.catalogservice.repositories.BookRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
+import java.util.Random;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class PolarBookshopApplicationTests {
+    @Autowired
+    BookRepository bookRepository;
 
     @Autowired
     private WebTestClient webTestClient;
 
     @Test
     void whenGetRequestWithIdThenBookReturned() {
+        Random random = new Random();
         var bookIsbn = "1231231230";
         var bookToCreate = Book.of(bookIsbn, "Title", "Author", 9.90);
         Book expectedBook = webTestClient
@@ -37,11 +43,13 @@ class PolarBookshopApplicationTests {
                     assertThat(actualBook).isNotNull();
                     assertThat(actualBook.isbn()).isEqualTo(expectedBook.isbn());
                 });
+        bookRepository.deleteByIsbn(bookIsbn);
     }
 
     @Test
     void whenPostRequestThenBookCreated() {
-        var expectedBook = Book.of("1231231231",
+        var bookIsbn = "1231231231";
+        var expectedBook = Book.of(bookIsbn,
                 "Title", "Author", 9.90);
         webTestClient
                 .post()
@@ -53,6 +61,8 @@ class PolarBookshopApplicationTests {
                     assertThat(actualBook).isNotNull();
                     assertThat(actualBook.isbn()).isEqualTo(expectedBook.isbn());
                 });
+        bookRepository.deleteByIsbn(bookIsbn);
+
     }
 
     @Test
@@ -82,6 +92,7 @@ class PolarBookshopApplicationTests {
                     assertThat(actualBook).isNotNull();
                     assertThat(actualBook.price()).isEqualTo(bookToUpdate.price());
                 });
+        bookRepository.deleteByIsbn(bookIsbn);
     }
 
     @Test
@@ -109,5 +120,6 @@ class PolarBookshopApplicationTests {
                 .expectBody(String.class).value(errorMessage ->
                         assertThat(errorMessage).isEqualTo("The book with ISBN: " + bookIsbn + " was not found")
                 );
+
     }
 }
