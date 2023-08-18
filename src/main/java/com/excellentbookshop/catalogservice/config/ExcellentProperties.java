@@ -10,7 +10,6 @@ import org.springframework.core.env.Environment;
 @ConfigurationProperties(prefix = "polar")
 public class ExcellentProperties {
     private String greeting;
-    private final TestData testData;
 
     @Autowired
     private Environment environment;
@@ -18,13 +17,6 @@ public class ExcellentProperties {
     @Value("${server.port}")
     private String serverPort;
 
-    public ExcellentProperties() {
-        this.testData = new TestData();
-    }
-
-    public TestData getTestData() {
-        return this.testData;
-    }
 
     public String getServerPortByEnvironment() {
         return environment.getProperty("server.port");
@@ -46,20 +38,4 @@ public class ExcellentProperties {
         this.greeting = greeting;
     }
 
-    public static class TestData {
-        private boolean enabled;
-
-        public TestData() {
-            this.enabled = false;
-        }
-
-        public boolean isEnabled() {
-            return enabled;
-        }
-
-        public void setEnabled(boolean enabled) {
-            this.enabled = enabled;
-        }
-
-    }
 }

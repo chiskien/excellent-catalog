@@ -41,6 +41,7 @@ class PolarBookshopApplicationTests {
                 .expectStatus().is2xxSuccessful()
                 .expectBody(Book.class).value(actualBook -> {
                     assertThat(actualBook).isNotNull();
+                    assert expectedBook != null;
                     assertThat(actualBook.isbn()).isEqualTo(expectedBook.isbn());
                 });
         bookRepository.deleteByIsbn(bookIsbn);

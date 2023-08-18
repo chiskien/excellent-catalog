@@ -9,5 +9,4 @@ create table book(
     created_date timestamp not null ,
     last_modified_date timestamp not null ,
     version integer not null
-
 )
