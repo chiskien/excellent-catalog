@@ -11,11 +11,8 @@ import java.util.Optional;
 
 @Repository
 public interface BookRepository extends CrudRepository<Book, Long> {
-
     Optional<Book> findBookByIsbn(String isbn);
-
     boolean existsBookByIsbn(String isbn);
-
     @Modifying
     @Transactional
     @Query("delete from book where isbn = :isbn;")
