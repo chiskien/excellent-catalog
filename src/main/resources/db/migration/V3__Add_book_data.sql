@@ -1,2 +1,0 @@
-INSERT INTO public.book (id, author, isbn, price, title, created_date, last_modified_date, version, publisher) VALUES (1, 'James Clear', '1234567896', 8.9, 'Atomic Habits', '2023-08-19 17:16:15.807969', '2023-08-19 17:16:15.807969', 1, 'Penguin');
-INSERT INTO public.book (id, author, isbn, price, title, created_date, last_modified_date, version, publisher) VALUES (2, 'Matt Haig', '1234567898', 8.9, 'The Midnight Library', '2023-08-19 17:18:24.183204', '2023-08-19 17:18:24.183204', 1, 'Manning');
