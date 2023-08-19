@@ -28,9 +28,9 @@ public class BookDataLoader {
         var now = Instant.now();
         bookRepository.deleteAll();
         Book b1 = Book.of("1234567891", "Atomic Habits",
-                "James Clear", 23.0);
+                "James Clear", 23.0, "Penguin ");
         Book b2 = Book.of("1234567899", "The Midnight Library",
-                "Matt Haig", 200.0);
+                "Matt Haig", 200.0, "Penguin");
         bookRepository.saveAll(List.of(b1, b2));
     }
 }
