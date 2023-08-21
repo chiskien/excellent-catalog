@@ -1,11 +1,8 @@
 # Excellent Book Shop
 
-Excellent BookShop is separate from Excellent Reads
-
+Excellent BookShop is a Cloud Native Spring Boot Application. 
 > Excellent Read acts as a social media like facebook, instagram, and people can post their review about books and
 > tracks down their progress.
->
->
 > Excellent Book Shop is online book store.
 
 ## Use cases:
