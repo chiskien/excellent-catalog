@@ -14,7 +14,6 @@ import java.time.Instant;
 //
 public record Book(
         @Id Long id,
-
         @NotBlank(message = "The Book ISBN must be defined")
         @Pattern(regexp = "^([0-9]{10}|[0-9]{13}$)",
                 message = "The ISBN format must be valid")
@@ -28,7 +27,6 @@ public record Book(
         String publisher,
         @CreatedDate
         Instant createdDate,
-
         @LastModifiedDate
         Instant lastModifiedDate,
         @Version int version) {
