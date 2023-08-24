@@ -37,33 +37,44 @@ Excellent BookShop is a Cloud Native Spring Boot Application.
 - DigitalOcean: public cloud provider
 
 ## Configuration
+
 - Using External Configuration
 - Spring Cloud Config
 
-
 ## Commands:
+
 - Create a network within Docker (because Docker built-in has a DNS Server)
+
 ```shell
 docker network create catalog-network
 ```
+
 - Create a `postgres` container applying network inside container
+
 ```shell
 docker run -d --name excellent-postgres --net catalog-network -e POSTGRES_USER=<user> -e POSTGRES_PASSWORD=<password>
 -e POSTGRES_DB=polardb_catalog -p 5432:5432 postgres:15.3
 ```
-- Build JAR
+
+- Create JAR
+
 ```shell
 ./mvnw clean install
 ```
+
 - Build `catalog-service` image
+
 ```shell
 docker build -t catalog-service .
 ```
+
 - Run Application with Docker
+
 ```shell
 docker run --rm --name catalog-service --net catalog-network -p 9001:9001
--e SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/polardb_catalog
+-e SPRING_DATASOURCE_URL=jdbc:postgresql://excllent-postgres:5432/polardb_catalog
 -e SPRING_PROFILES_ACTIVE=demo catalog-service
 ```
 
-
+- Instead of `localhost:5432`, we replace with `excellent-postgres` (the name of container we created above)
+- Activate `demo` profile with dummy data.
