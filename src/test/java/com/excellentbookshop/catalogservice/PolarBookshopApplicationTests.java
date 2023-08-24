@@ -65,7 +65,6 @@ class PolarBookshopApplicationTests {
                     assertThat(actualBook.isbn()).isEqualTo(expectedBook.isbn());
                 });
         bookRepository.deleteByIsbn(bookIsbn);
-
     }
 
     @Test
