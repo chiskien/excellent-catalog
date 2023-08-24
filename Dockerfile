@@ -1,8 +1,8 @@
-#bases the new image on the official image for Ubuntu version 23.10#
-FROM ubuntu:23.10
+FROM eclipse-temurin:17
+LABEL authors="chisk"
+WORKDIR workspace
 
-#Install the JRE using familiar bash commands#
-RUN apt-get update && apt-get install -y default-jre
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} catalog-service.jar
 
-#Define the #
-ENTRYPOINT ["java", "--version"]
+ENTRYPOINT ["java", "-jar", "catalog-service.jar"]

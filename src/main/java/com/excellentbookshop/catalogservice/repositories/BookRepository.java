@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Repository
 public interface BookRepository extends CrudRepository<Book, Long> {
-    Optional<Book> findBookByIsbn(String isbn);
+    Optional<Book> findBookByIsbn(String isbn); //the method will be providing at Runtim
     boolean existsBookByIsbn(String isbn);
     @Modifying
     @Transactional
