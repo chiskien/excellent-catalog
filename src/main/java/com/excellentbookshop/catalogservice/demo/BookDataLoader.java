@@ -25,7 +25,6 @@ public class BookDataLoader {
     // test data is generated when an ApplicationReadyEvent is triggered
     @EventListener(ApplicationReadyEvent.class)
     public void loadBooks() {
-        var now = Instant.now();
         bookRepository.deleteAll();
         Book b1 = Book.of("1234567891", "Atomic Habits",
                 "James Clear", 23.0, "Penguin ");
