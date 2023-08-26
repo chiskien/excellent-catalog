@@ -41,7 +41,7 @@ Excellent BookShop is a Cloud Native Spring Boot Application.
 - Using External Configuration
 - Spring Cloud Config
 
-## Commands:
+## Commands: (if don't use docker compose)
 
 - Create a network within Docker (because Docker built-in has a DNS Server)
 
