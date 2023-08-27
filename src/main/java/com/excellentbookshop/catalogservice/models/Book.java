@@ -9,6 +9,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.annotation.Version;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
+import org.springframework.data.relational.core.sql.In;
 
 import java.time.Instant;
 
@@ -39,5 +40,12 @@ public record Book(
         return new Book(null,
                 isbn, title, author, price, publisher,
                 null, null, 0);
+    }
+
+    public static Book bookWithDate(String isbn, String title, String author, Double price, String publisher,
+                                    Instant createdDate, Instant lastModifiedDate) {
+        return new Book(null,
+                isbn, title, author, price, publisher,
+                createdDate, lastModifiedDate, 0);
     }
 }

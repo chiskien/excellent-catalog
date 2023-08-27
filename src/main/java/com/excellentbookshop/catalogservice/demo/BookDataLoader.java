@@ -26,10 +26,11 @@ public class BookDataLoader {
     @EventListener(ApplicationReadyEvent.class)
     public void loadBooks() {
         bookRepository.deleteAll();
-        Book b1 = Book.of("1234567891", "Atomic Habits",
-                "James Clear", 23.0, "Penguin ");
-        Book b2 = Book.of("1234567899", "The Midnight Library",
-                "Matt Haig", 200.0, "Penguin");
+        Instant now = Instant.now();
+        Book b1 = Book.bookWithDate("1234567891", "Atomic Habits",
+                "James Clear", 23.0, "Penguin", now, now);
+        Book b2 = Book.bookWithDate("1234567899", "The Midnight Library",
+                "Matt Haig", 200.0, "Penguin", now, now);
         bookRepository.saveAll(List.of(b1, b2));
     }
 }
