@@ -52,7 +52,7 @@ docker network create catalog-network
 - Create a `postgres` container applying network inside container
 
 ```shell
-docker run -d --name excellent-postgres --net catalog-network -e POSTGRES_USER=<user> -e POSTGRES_PASSWORD=<password>
+docker run -d --name excellent-postgres --net excellent-network -e POSTGRES_USER=<user> -e POSTGRES_PASSWORD=<password>
 -e POSTGRES_DB=polardb_catalog -p 5432:5432 postgres:15.3
 ```
 
@@ -62,18 +62,20 @@ docker run -d --name excellent-postgres --net catalog-network -e POSTGRES_USER=<
 ./mvnw clean install
 ```
 
-- Build `catalog-service` image
+- Build `excellent-bookshop` image
 
 ```shell
-docker build -t catalog-service .
+docker build -t excellent-bookshop .
+
 ```
 
 - Run Application with Docker
 
 ```shell
-docker run --rm --name catalog-service --net catalog-network -p 9001:9001
+docker run --rm --name excellent-bookshop --net excellent-network -p 9001:9001
 -e SPRING_DATASOURCE_URL=jdbc:postgresql://excllent-postgres:5432/polardb_catalog
--e SPRING_PROFILES_ACTIVE=demo catalog-service
+-e SPRING_PROFILES_ACTIVE=demo excellent-bookshop
+
 ```
 
 - Instead of `localhost:5432`, we replace with `excellent-postgres` (the name of container we created above)
