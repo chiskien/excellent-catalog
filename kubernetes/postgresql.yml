@@ -22,7 +22,7 @@ spec:
             - name: POSTGRES_PASSWORD
               value: chiskien
             - name: POSTGRES_DB
-              value: polardb_catalog
+              value: excellentdb_catalog
           resources:
             requests:
               cpu: 100m

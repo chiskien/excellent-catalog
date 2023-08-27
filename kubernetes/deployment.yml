@@ -1,6 +1,29 @@
-apiVersion: apps/v1    # The API version for Development object
+apiVersion: apps/v1    # The API version defines the versioned schema of this representation of an object
+
 kind: Deployment  # The Type of Object to create
 metadata:
-  name: excellent-bookshop
-  labels:
-    app: excellent-bookshop
+  name: excellent-bookshop # name of the deployment
+  labels: # A set of labels attached to the development
+    app: excellent-bookshop # this development is labeled with app=excellent-bookshop
+spec:
+  selector:
+    matchLabels:
+      app: excellent-bookshop
+  template:
+    metadata:
+      labels:
+        app: excellent-bookshop
+    spec:
+      containers:
+        - name: excellent-bookshop
+          image: excellent-bookshop
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9001
+          env:
+            - name: BPL_JVM_THREAD_COUNT
+              value: "50"
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:postgresql://excellent-postgres:5432/excellentdb_catalog
+
+
