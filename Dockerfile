@@ -1,13 +1,14 @@
+# Custom Instruction for building image
 
-
-#FROM eclipse-temurin:20
+FROM eclipse-temurin:20
 #Ubuntu base image with eclipse temurin distribution of pre-JRE installed
-#LABEL authors="chisk"
-#WORKDIR workspace
+
+LABEL authors="chisk"
+WORKDIR workspace
 # Change the current dir to "workspace"
 
-#ARG JAR_FILE=target/*.jar
+ARG JAR_FILE=target/*.jar
 
-#COPY ${JAR_FILE} excellent-bookshop.jar
+COPY ${JAR_FILE} excellent-bookshop.jar
 
-#ENTRYPOINT ["java", "-jar", "excellent-bookshop:0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "excellent-bookshop:0.0.1-SNAPSHOT.jar"]
