@@ -4,26 +4,28 @@ kind: Deployment  # The Type of Object to create
 metadata:
   name: excellent-bookshop # name of the deployment
   labels: # A set of labels attached to the development
-    app: excellent-bookshop # this development is labeled with app=excellent-bookshop
+    app: excellent-bookshop  # this development is labeled with app=excellent-bookshop
 spec:
-  selector:
+  selector: # Defines the labels used to select the Pods to be scaled
     matchLabels:
       app: excellent-bookshop
-  template:
+  template: # The Template for creating a Pod
     metadata:
-      labels:
+      labels: # Labels attached to the Pod object. Should be match with label above
         app: excellent-bookshop
     spec:
-      containers:
-        - name: excellent-bookshop
-          image: excellent-bookshop
-          imagePullPolicy: IfNotPresent
+      containers: # The List of containers in the Pod
+        - name: excellent-bookshop # name of the pod
+          image: excellent-bookshop # image used to run the container
+          imagePullPolicy: IfNotPresent # instruct the k8s to pull if not present locally
           ports:
-            - containerPort: 9001
+            - containerPort: 9001 #port expose by the container
           env:
             - name: BPL_JVM_THREAD_COUNT
               value: "50"
             - name: SPRING_DATASOURCE_URL
-              value: jdbc:postgresql://excellent-postgres:5432/excellentdb_catalog
+              value: jdbc:postgresql://excellent-postgres/excellentdb_catalog
+            - name: SPRING_PROFILES_ACTIVE
+              value: demo
 
 
