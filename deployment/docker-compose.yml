@@ -20,7 +20,7 @@ services:
     image: "postgres:15.3"
     container_name: "excellent-postgres"
     ports:
-      - 5432:5432
+      - "5432:5432"
     environment:
       - POSGRES_USER=postgres
       - POSTGRES_PASSWORD=chiskien
@@ -30,8 +30,8 @@ services:
     image: "config-service:0.0.1-SNAPSHOT"
     container_name: "config-service"
     ports:
-      - 8888:8888
-      - 9888:9888
+      - "8888:8888"
+      - "9888:9888"
     environment:
       - BPL_JVM_THREAD_COUNT=50
       - BPL_DEBUG_ENABLED=true

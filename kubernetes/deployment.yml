@@ -1,0 +1,6 @@
+apiVersion: apps/v1    # The API version for Development object
+kind: Deployment  # The Type of Object to create
+metadata:
+  name: excellent-bookshop
+  labels:
+    app: excellent-bookshop

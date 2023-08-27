@@ -8,6 +8,6 @@ WORKDIR workspace
 
 ARG JAR_FILE=target/*.jar
 
-COPY ${JAR_FILE} catalog-service.jar
+COPY ${JAR_FILE} excellent-bookshop.jar
 
 ENTRYPOINT ["java", "-jar", "excellent-bookshop:0.0.1-SNAPSHOT.jar"]
