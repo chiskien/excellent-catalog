@@ -2,7 +2,6 @@ package com.excellentbookshop.catalogservice.demo;
 
 import com.excellentbookshop.catalogservice.models.Book;
 import com.excellentbookshop.catalogservice.repositories.BookRepository;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.EventListener;
