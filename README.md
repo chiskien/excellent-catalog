@@ -1,17 +1,6 @@
 # Excellent Book Shop
 
-Excellent BookShop is a Cloud Native Spring Boot Application.
-> Excellent Read acts as a social media like facebook, instagram, and people can post their review about books and
-> tracks down their progress.
-> Excellent Book Shop is online book store.
-
-## Use cases:
-
-- View the list of books in the catalog
-- Search books by their ISBN (International Standard Book Number)
-- Add a new book to the catalog
-- Edit information for an existing book
-- Remove a book from the catalog
+Excellent BookShop is a Cloud Native Application with Spring Boot and Kubernetes.
 
 # Patterns and Technologies
 
@@ -20,8 +9,8 @@ Excellent BookShop is a Cloud Native Spring Boot Application.
 
 ## Web and Interactions
 
-- RESTFul web services using Spring MVC (blocking)
-- Spring WebFlux / Reacting Programming (non-blocking)
+- RESTFul web services using Spring MVC (blocking I/O, synchronous)
+- Spring WebFlux / Reacting Programming (non-blocking I/O, asynchronous)
 - Event-Driven Programming
 - Spring Cloud stream
 
@@ -40,6 +29,16 @@ Excellent BookShop is a Cloud Native Spring Boot Application.
 
 - Using External Configuration
 - Spring Cloud Config
+
+## Use cases:
+
+### Excellent Bookshop (Catalog Service):
+
+- View the list of books in the catalog
+- Search books by their ISBN (International Standard Book Number)
+- Add a new book to the catalog
+- Edit information for an existing book
+- Remove a book from the catalog
 
 ## Commands: (if don't use docker compose)
 
