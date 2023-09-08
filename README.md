@@ -2,12 +2,17 @@
 
 Excellent BookShop is a Cloud Native Application with Spring Boot and Kubernetes.
 
+<img src="images/Drawing1.jpg" alt=""/>
+
+- [Order Service](https://github.com/chiskien/excellent-order-service)
+- [Deployment](https://github.com/chiskien/excellent-deployment)
+- [Edge Service](https://github.com/chiskien/excellent-edge-service)
+- [Config Service](https://github.com/chiskien/config-service)
+
 # Patterns and Technologies
 
 - [12 Factors and Beyond Practices and Patterns](https://architecturenotes.co/12-factor-app-revisited/)
 - Service-based Architecture
-
-[Architecture](images/Drawing2.png)
 
 ## Web and Interactions
 
