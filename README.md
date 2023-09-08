@@ -2,6 +2,21 @@
 
 Excellent BookShop is a Cloud Native Application with Spring Boot and Kubernetes.
 
+# Use cases:
+
+### Excellent Bookshop (Catalog Service):
+
+- View the list of books in the catalog
+- Search books by their ISBN (International Standard Book Number)
+- Add a new book to the catalog
+- Edit information for an existing book
+- Remove a book from the catalog
+
+### [Order Service](https://github.com/chiskien/excellent-order-service)
+
+- Submit an Orders
+- Get Book detail from Excellent-BookShop
+
 <img src="images/Drawing1.jpg" alt=""/>
 
 - [Order Service](https://github.com/chiskien/excellent-order-service)
@@ -32,21 +47,6 @@ Excellent BookShop is a Cloud Native Application with Spring Boot and Kubernetes
 
 - Using External Configuration
 - Spring Cloud Config
-
-## Use cases:
-
-### Excellent Bookshop (Catalog Service):
-
-- View the list of books in the catalog
-- Search books by their ISBN (International Standard Book Number)
-- Add a new book to the catalog
-- Edit information for an existing book
-- Remove a book from the catalog
-
-### [Order Service](https://github.com/chiskien/excellent-order-service)
-
-- Submit an Orders
-- Get Book detail from Excellent-BookShop
 
 ## Commands: (if don't use docker compose)
 
