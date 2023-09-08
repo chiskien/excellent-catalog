@@ -7,12 +7,12 @@ Excellent BookShop is a Cloud Native Application with Spring Boot and Kubernetes
 - [12 Factors and Beyond Practices and Patterns](https://architecturenotes.co/12-factor-app-revisited/)
 - Service-based Architecture
 
+[Architecture](images/Drawing2.png)
+
 ## Web and Interactions
 
 - RESTFul web services using Spring MVC (blocking I/O, synchronous)
 - Spring WebFlux / Reacting Programming (non-blocking I/O, asynchronous)
-- Event-Driven Programming
-- Spring Cloud stream
 
 ## Data
 
@@ -21,9 +21,7 @@ Excellent BookShop is a Cloud Native Application with Spring Boot and Kubernetes
 - Spring Data R2DBC (reactive)
 - Flyway: evolve data source and manage schema migrations
 - Redis, Spring Session: externalize the session storage
-- Spring AMQP, RabbitMQ: deal with messages to implement event-driven architecture
 - Docker: containerize application
-- DigitalOcean: public cloud provider
 
 ## Configuration
 
@@ -39,6 +37,11 @@ Excellent BookShop is a Cloud Native Application with Spring Boot and Kubernetes
 - Add a new book to the catalog
 - Edit information for an existing book
 - Remove a book from the catalog
+
+### [Order Service](https://github.com/chiskien/excellent-order-service)
+
+- Submit an Orders
+- Get Book detail from Excellent-BookShop
 
 ## Commands: (if don't use docker compose)
 
