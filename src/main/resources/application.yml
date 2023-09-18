@@ -39,6 +39,9 @@ management:
     web:
       exposure:
         include: refresh
+  endpoint:
+    health:
+      show-details: always
 #spring:
 #  profiles:
 #    active: test-data
