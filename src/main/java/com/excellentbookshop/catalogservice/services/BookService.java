@@ -23,7 +23,7 @@ public class BookService {
                 .orElseThrow(() -> new BookNotFoundException(isbn));
     }
 
-    public Book addBooktoCatalog(Book book) {
+    public Book addBookToCatalog(Book book) {
         if (bookRepository.existsBookByIsbn(book.isbn())) {
             throw new BookAlreadyExistException(book.isbn());
         }
@@ -49,6 +49,6 @@ public class BookService {
                             existingBook.version()
                     );
                     return bookRepository.save(bookToUpdate);
-                }).orElseGet(() -> addBooktoCatalog(book));
+                }).orElseGet(() -> addBookToCatalog(book));
     }
 }
