@@ -1,7 +1,7 @@
 server:
   port: 9001
   tomcat:
-    connection-timeout: 2s
+    connection-timeout: 2s # define a limit how much time Tomcat should wait between accepting TCP connection from a client and actually received the HTTP Request. Helps prevent denial-of-service (DoS)
     keep-alive-timeout: 15s
     threads:
       max: 50

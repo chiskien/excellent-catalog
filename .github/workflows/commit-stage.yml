@@ -10,12 +10,12 @@ env:
   VERSION: latest
 
 jobs:
-  build:
-    name: Build and Test
-    runs-on: ubuntu-22.04
-    permissions:
-      contents: read
-      security-events: write
+  build: #the job's unique identifier
+    name: Build and Test # human-friendly name for the job
+    runs-on: ubuntu-22.04 # the type of machine where the job should be run
+    permissions: # the permissions granted to the job
+      contents: read #Permission to check out the current Git repository
+      security-events: write # Permission to submit security events to GitHub
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3

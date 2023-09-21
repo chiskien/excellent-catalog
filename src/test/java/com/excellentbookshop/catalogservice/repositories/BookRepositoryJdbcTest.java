@@ -87,7 +87,8 @@ class BookRepositoryJdbcTest {
 
         bookRepository.deleteByIsbn(bookIsbn);
 
-        assertThat(jdbcAggregateTemplate.findById(persistedBook.id(), Book.class)).isNull();
+        assertThat(jdbcAggregateTemplate.findById(persistedBook.id(), Book.class))
+                .isNull();
     }
 
 }
