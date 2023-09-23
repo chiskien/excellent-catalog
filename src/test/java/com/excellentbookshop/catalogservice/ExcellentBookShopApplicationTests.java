@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("integration")
-class PolarBookshopApplicationTests {
+class ExcellentBookShopApplicationTests {
     @Autowired
     BookRepository bookRepository;
 
