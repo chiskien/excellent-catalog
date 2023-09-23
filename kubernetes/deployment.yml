@@ -20,12 +20,12 @@ spec:
           imagePullPolicy: IfNotPresent # instruct the k8s to pull if not present locally
           ports:
             - containerPort: 9001 #port expose by the container
-          env:
-            - name: BPL_JVM_THREAD_COUNT
+          env: # the list of environment variables passed to the Pod
+            - name: BPL_JVM_THREAD_COUNT # A Paketo Buildpacks environment variable to configure the number of threads for memory calculation
               value: "50"
-            - name: SPRING_DATASOURCE_URL
+            - name: SPRING_DATASOURCE_URL # A value for the spring.datasource.url property pointing to the PostgreSQL Pod deployed previously
               value: jdbc:postgresql://excellent-postgres/excellentdb_catalog
-            - name: SPRING_PROFILES_ACTIVE
+            - name: SPRING_PROFILES_ACTIVE # enable demo profile with dummyData
               value: demo
 
 
