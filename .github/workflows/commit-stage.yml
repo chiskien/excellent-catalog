@@ -5,8 +5,8 @@ name: Commit Stage
 on: release
 
 env:
-  REGISTRY: ghcr.io  # uses the github container registry
-  IMAGE_NAME: chiskien/excellent-bookshop # the githubname/image-name
+  REGISTRY: ghcr.io  # uses the GiyHub container registry
+  IMAGE_NAME: chiskien/excellent-bookshop # the github-name/image-name
   VERSION: latest
 
 jobs:
@@ -18,9 +18,9 @@ jobs:
       security-events: write # Permission to submit security events to GitHub
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3 # check out current repository
       - name: Set up JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v3   # installs and configures JRE
         with:
           distribution: temurin
           java-version: 17
@@ -52,9 +52,9 @@ jobs:
       security-events: write # Permission to submit security events to GitHub
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v3 # check out current repository
+        uses: actions/checkout@v3
       - name: Set up JDK
-        uses: actions/setup-java@v3 # installs and configures JRE
+        uses: actions/setup-java@v3
         with:
           distribution: temurin
           java-version: 17
@@ -74,7 +74,7 @@ jobs:
           severity-cutoff: high
           acs-report-enable: true
       - name: Upload vulnerability report
-        uses: github/codeql-action/upload-sarif@v2 # uploads the security vulnerability report to Github
+        uses: github/codeql-action/upload-sarif@v2 # uploads the security vulnerability report to GitHub
         if: success() || failure()
         with:
           sarif_file: ${{ steps.scan.outputs.sarif }}
