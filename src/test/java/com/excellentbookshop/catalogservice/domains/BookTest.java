@@ -1,4 +1,4 @@
-package com.excellentbookshop.catalogservice.models;
+package com.excellentbookshop.catalogservice.domains;
 
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;

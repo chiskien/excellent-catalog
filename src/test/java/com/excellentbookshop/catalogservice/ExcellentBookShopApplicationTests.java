@@ -1,6 +1,6 @@
 package com.excellentbookshop.catalogservice;
 
-import com.excellentbookshop.catalogservice.models.Book;
+import com.excellentbookshop.catalogservice.domains.Book;
 import com.excellentbookshop.catalogservice.repositories.BookRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

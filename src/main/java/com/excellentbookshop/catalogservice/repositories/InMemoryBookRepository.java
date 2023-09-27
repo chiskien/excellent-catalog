@@ -1,6 +1,6 @@
 package com.excellentbookshop.catalogservice.repositories;
 
-import com.excellentbookshop.catalogservice.models.Book;
+import com.excellentbookshop.catalogservice.domains.Book;
 import org.springframework.stereotype.Repository;
 
 import java.util.Map;

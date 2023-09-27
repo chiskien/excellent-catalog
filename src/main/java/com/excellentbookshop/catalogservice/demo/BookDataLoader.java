@@ -1,6 +1,6 @@
 package com.excellentbookshop.catalogservice.demo;
 
-import com.excellentbookshop.catalogservice.models.Book;
+import com.excellentbookshop.catalogservice.domains.Book;
 import com.excellentbookshop.catalogservice.repositories.BookRepository;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.annotation.Profile;

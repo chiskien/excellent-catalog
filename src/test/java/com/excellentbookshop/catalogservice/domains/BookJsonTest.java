@@ -1,4 +1,4 @@
-package com.excellentbookshop.catalogservice.models;
+package com.excellentbookshop.catalogservice.domains;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,11 +1,10 @@
-package com.excellentbookshop.catalogservice.models;
+package com.excellentbookshop.catalogservice.domains;
 
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.annotation.Version;
-import org.springframework.stereotype.Component;
 
 import java.time.Instant;
 

@@ -1,7 +1,7 @@
 package com.excellentbookshop.catalogservice.services;
 
 import com.excellentbookshop.catalogservice.exceptions.BookNotFoundException;
-import com.excellentbookshop.catalogservice.models.Book;
+import com.excellentbookshop.catalogservice.domains.Book;
 import com.excellentbookshop.catalogservice.exceptions.BookAlreadyExistException;
 import com.excellentbookshop.catalogservice.repositories.BookRepository;
 import org.springframework.stereotype.Service;

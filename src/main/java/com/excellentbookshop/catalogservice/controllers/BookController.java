@@ -1,6 +1,6 @@
 package com.excellentbookshop.catalogservice.controllers;
 
-import com.excellentbookshop.catalogservice.models.Book;
+import com.excellentbookshop.catalogservice.domains.Book;
 import com.excellentbookshop.catalogservice.services.BookService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;

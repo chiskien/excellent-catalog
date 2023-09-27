@@ -2,7 +2,7 @@
 name: Commit Stage
 
 # the workflow is triggered when new code is published to the repository
-on: release
+on: push
 
 env:
   REGISTRY: ghcr.io  # uses the GiyHub container registry
