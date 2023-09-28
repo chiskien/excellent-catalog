@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("books")
+@RequestMapping(value = "books")
 public class BookController {
     private final BookService bookService;
 
@@ -20,7 +20,7 @@ public class BookController {
         return bookService.viewBookList();
     }
 
-    @GetMapping("{isbn}")
+    @GetMapping(value = "{isbn}")
     public Book getByIsbn(@PathVariable String isbn) {
         return bookService.viewBookDetail(isbn);
     }
@@ -31,7 +31,7 @@ public class BookController {
         return bookService.addBookToCatalog(book);
     }
 
-    @DeleteMapping("{isbn}")
+    @DeleteMapping(value = "{isbn}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable String isbn) {
         bookService.removeBookFromCatalog(isbn);
