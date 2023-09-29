@@ -6,12 +6,13 @@ metadata:
   labels: # A set of labels attached to the development
     app: excellent-bookshop  # this development is labeled with app=excellent-bookshop
 spec:
+  replicas: 1
   selector: # Defines the labels used to select the Pods to be scaled
     matchLabels:
       app: excellent-bookshop
   template: # The Template for creating a Pod
     metadata:
-      labels: # Labels attached to the Pod object. Should be match with label above
+      labels: # Labels attached to the Pod object. Should be match with the label above
         app: excellent-bookshop
     spec:
       containers: # The List of containers in the Pod
