@@ -5,7 +5,7 @@ custom_build (
     # Command to build the container image
     command = 'mvn spring-boot:build-image',
     # Files to watch that trigger a new build
-    deps = ['pom.xml', 'src']
+    deps = ['src', 'pom.xml']
 )
 
 # Deploy
