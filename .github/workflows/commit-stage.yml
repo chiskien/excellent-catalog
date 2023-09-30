@@ -18,7 +18,7 @@ jobs:
       security-events: write # Permission to submit security events to GitHub
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v3 # check out current repository
+        uses: actions/checkout@v3 # check out the current repository
       - name: Set up JDK
         uses: actions/setup-java@v3   # installs and configures JRE
         with:
@@ -43,7 +43,7 @@ jobs:
 
   package: # The job's unique identifier
     name: Package and Publish
-    if: ${{ github.ref == 'refs/heads/master' }} # runs job only on master branch
+    if: ${{ github.ref == 'refs/heads/master' }} # runs job only on primary branch
     needs: [ build ]  # runs job only if the "build" successfully
     runs-on: ubuntu-22.04 # base image
     permissions:
