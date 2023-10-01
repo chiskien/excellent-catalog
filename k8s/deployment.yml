@@ -27,7 +27,7 @@ spec:
             - containerPort: 9001 #port expose by the container
           env: # the list of environment variables passed to the Pod
             - name: BPL_JVM_THREAD_COUNT # A Paketo Buildpacks environment variable to configure the number of threads for memory calculation
-              value: "50"
+              value: "70"
             - name: SPRING_CLOUD_CONFIG_URI
               value: http://config-service
             - name: SPRING_DATASOURCE_URL # A value for the spring.datasource.url property pointing to the PostgreSQL Pod deployed previously

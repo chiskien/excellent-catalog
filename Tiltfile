@@ -3,7 +3,7 @@ custom_build (
     # Name of the container image
     ref = 'excellent-bookshop',
     # Command to build the container image
-    command = 'mvn spring-boot:build-image',
+    command = 'mvn spring-boot:build-image -D imageName=${EXPECTED_REF}',
     # Files to watch that trigger a new build
     deps = ['src', 'pom.xml']
 )
