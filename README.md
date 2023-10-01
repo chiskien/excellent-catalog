@@ -50,7 +50,7 @@ Excellent BookShop is a Cloud Native Application with Spring Boot and Kubernetes
 - [Minikube](https://minikube.sigs.k8s.io/docs/): Local K8s Cluster
 - [Tilt](https://tilt.dev/): An open-source tools for automate k8s workflow
 - [Octant](https://octant.dev/): Visualize K8s workloads
-
+- [Kubeval](https://www.kubeval.com/): Validating K8s YAML Manifests.
 ## Configuration
 
 - Using External Configuration
