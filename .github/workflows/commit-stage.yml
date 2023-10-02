@@ -2,7 +2,7 @@
 name: Commit Stage
 
 # the workflow is triggered when new code is published to the repository
-on: release
+on: push
 
 env:
   REGISTRY: ghcr.io  # uses the GiyHub container registry
@@ -43,7 +43,7 @@ jobs:
       - name: Validate Kubernetes Manifest
         uses: stefanprodan/kube-tools@v1
         with:
-          kubectl: 1.27.2
+          kubectl: 1.27.4
           kubeval: 0.16.1
           command: kubeval --strict -d k8s
 
