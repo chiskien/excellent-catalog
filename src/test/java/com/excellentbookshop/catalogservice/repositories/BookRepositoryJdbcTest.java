@@ -82,7 +82,6 @@ class BookRepositoryJdbcTest {
         var bookIsbn = "1234561241";
         var bookToCreate = Book.of(bookIsbn, "Title", "Author", 9.0, "Polarsophia12");
         var persistedBook = jdbcAggregateTemplate.insert(bookToCreate);
-
         bookRepository.deleteByIsbn(bookIsbn);
 
         assertThat(jdbcAggregateTemplate.findById(persistedBook.id(), Book.class))
