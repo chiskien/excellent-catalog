@@ -2,7 +2,7 @@
 name: Commit Stage
 
 # the workflow is triggered when new code is published to the repository
-on: release
+on: push
 
 env:
   REGISTRY: ghcr.io  # uses the GiyHub container registry
@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-java@v3   # installs and configures JRE
         with:
           distribution: temurin
-          java-version: 17
+          java-version: 21
           cache: maven
       - name: Code vulnerability scanning
         uses: anchore/scan-action@v3
@@ -63,7 +63,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: temurin
-          java-version: 17
+          java-version: 21
           cache: maven
       - name: Build container image
         # using BuildPacks integration in Spring to build container image
