@@ -8,8 +8,8 @@
         <version>3.1.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.excellent-bookshop</groupId>
-    <artifactId>excellent-bookshop</artifactId>
+    <groupId>com.excellent-catalog-service</groupId>
+    <artifactId>excellent-catalog-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>excellent-bookshop</name>
     <description>excellent-bookshop</description>
