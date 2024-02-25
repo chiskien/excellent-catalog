@@ -1,6 +1,5 @@
 package com.excellentbookshop.catalogservice.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.core.env.Environment;
@@ -10,12 +9,14 @@ import org.springframework.core.env.Environment;
 @ConfigurationProperties(prefix = "polar")
 public class ExcellentProperties {
     private String greeting;
-
-    @Autowired
-    private Environment environment;
+    private final Environment environment;
 
     @Value("${server.port}")
     private String serverPort;
+
+    public ExcellentProperties(Environment environment) {
+        this.environment = environment;
+    }
 
 
     public String getServerPortByEnvironment() {

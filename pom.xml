@@ -16,6 +16,7 @@
     <properties>
         <java.version>21</java.version>
         <imageName>${project.name}</imageName>
+        <testKeycloakVersion>2.3.0</testKeycloakVersion>
     </properties>
     <dependencies>
         <dependency>
@@ -77,6 +78,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
             <version>3.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.dasniko</groupId>
+            <artifactId>testcontainers-keycloak</artifactId>
+            <version>${testKeycloakVersion}</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
