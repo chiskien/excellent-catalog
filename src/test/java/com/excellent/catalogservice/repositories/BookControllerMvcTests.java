@@ -20,8 +20,4 @@ public class BookControllerMvcTests {
     @MockBean
     JwtDecoder jwtDecoder;
 
-
-    @Test
-    void whenDeleteBookWithzz
-
 }
