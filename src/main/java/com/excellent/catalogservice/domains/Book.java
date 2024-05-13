@@ -16,11 +16,15 @@ import java.time.Instant;
 //
 @Table("book")
 public record Book(@Id @Column("id") Long id,
-                   @NotBlank(message = "The Book ISBN must be defined") @Pattern(regexp = "^([0-9]{10}|[0-9]{13}$)", message = "The ISBN format must be valid") String isbn,
+                   @NotBlank(message = "The Book ISBN must be defined")
+                   @Pattern(regexp = "^([0-9]{10}|[0-9]{13}$)", message = "The ISBN format must be valid")
+                   String isbn,
                    @NotBlank(message = "The book title must be defined") String title,
                    @NotBlank(message = "The author must be defined") String author,
                    @Positive(message = "The book price must be greater than zero") Double price,
-                   String publisher, @CreatedDate Instant createdDate, @LastModifiedDate Instant lastModifiedDate,
+                   String publisher,
+                   @CreatedDate Instant createdDate,
+                   @LastModifiedDate Instant lastModifiedDate,
                    @Version int version) {
     public static Book of(String isbn, String title, String author, Double price, String publisher) {
         return new Book(null, isbn, title, author, price, publisher, null, null, 0);

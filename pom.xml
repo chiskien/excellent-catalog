@@ -12,7 +12,7 @@
     <artifactId>catalog-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>catalog-service</name>
-    <description>Excellent Catalog Service: this microservice mainly for display all books in catalog</description>
+    <description>Catalog Service: this microservice mainly for display all books in catalog</description>
     <properties>
         <java.version>21</java.version>
         <imageName>${project.name}</imageName>

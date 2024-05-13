@@ -11,7 +11,7 @@ server:
 #  greeting: "Welcome to Catalog Service"
 spring:
   application:
-    name: excellent-catalog-service
+    name: Catalog Service
   config:
     import: "optional:configserver:"
   cloud:
